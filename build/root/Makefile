@@ -526,3 +526,8 @@ else
 help:
 	hack/make-rules/make-help.sh
 endif
+
+#Study
+.PHONY: run-apiserver
+run-apiserver:
+	go run cmd/kube-apiserver/apiserver.go --service-cluster-ip-range=10.0.0.0/16 \
